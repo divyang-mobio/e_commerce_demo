@@ -114,7 +114,7 @@ mainCardView(context, {required ProductDetailModel data}) {
         const SizedBox(height: 10),
         showMoreData(
           firstWidget: Flexible(
-            child: Text(data.name,
+            child: Text(data.name,maxLines: 2,
                 style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
           secondWidget: Text('\$ ${data.price}',

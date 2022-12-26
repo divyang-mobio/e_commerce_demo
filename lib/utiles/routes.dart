@@ -1,7 +1,7 @@
 import 'package:e_commerce_demo/model/product_detail_model.dart';
 import 'package:e_commerce_demo/views/detail_screen.dart';
-import 'package:e_commerce_demo/views/home_screen.dart';
 import 'package:flutter/material.dart';
+import '../views/bottom_navigation_bar.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings setting) {

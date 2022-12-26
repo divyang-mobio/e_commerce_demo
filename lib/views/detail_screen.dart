@@ -1,5 +1,7 @@
 import 'package:e_commerce_demo/model/product_detail_model.dart';
+import 'package:e_commerce_demo/model/save_item_model.dart';
 import 'package:flutter/material.dart';
+import '../resources/resources.dart';
 import '../widgets/home_screen_widgets.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -16,9 +18,32 @@ class _DetailScreenState extends State<DetailScreen> {
   int item = 1;
   int selectedColor = 0;
 
+  bottomAppBarButton(context) {
+    return MaterialButton(
+      height: 45,
+      minWidth: MediaQuery.of(context).size.width * .45,
+      onPressed: () {
+        saveData.add(SaveItemModel(
+            name: widget.productDetailModel.name,
+            description: widget.productDetailModel.description,
+            imageLink: widget.productDetailModel.imageLink,
+            price: widget.productDetailModel.price,
+            numberOfItem: item,
+            selectedProductColors:
+                widget.productDetailModel.productColors[selectedColor]));
+      },
+      color: const Color.fromARGB(255, 57, 199, 165),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(color: Color.fromARGB(255, 235, 235, 235))),
+      child: const Text('Continue', style: TextStyle(color: Colors.white)),
+    );
+  }
+
   itemIncDecMethod() {
     return Row(children: [
       itemCountButton(
+          height: 35,
           onTap: () {
             if (item > 1) {
               setState(() {
@@ -35,6 +60,7 @@ class _DetailScreenState extends State<DetailScreen> {
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
       const SizedBox(width: 15),
       itemCountButton(
+          height: 35,
           onTap: () {
             setState(() {
               item += 1;
@@ -42,7 +68,7 @@ class _DetailScreenState extends State<DetailScreen> {
           },
           iconData: Icons.add,
           iconColor: Colors.white,
-          containerBorderColor: Colors.white,
+          containerBorderColor: const Color.fromARGB(255, 57, 199, 165),
           containerColor: const Color.fromARGB(255, 57, 199, 165)),
     ]);
   }
@@ -155,32 +181,20 @@ class _DetailScreenState extends State<DetailScreen> {
 itemCountButton(
     {required GestureTapCallback onTap,
     required IconData iconData,
+    required double height,
     required Color iconColor,
     required Color containerColor,
     required Color containerBorderColor}) {
   return GestureDetector(
     onTap: onTap,
     child: Container(
-      height: 35,
-      width: 35,
+      height: height,
+      width: height,
       decoration: BoxDecoration(
           border: Border.all(color: containerBorderColor),
           color: containerColor,
           borderRadius: BorderRadius.circular(10)),
       child: Icon(iconData, color: iconColor),
     ),
-  );
-}
-
-bottomAppBarButton(context) {
-  return MaterialButton(
-    height: 45,
-    minWidth: MediaQuery.of(context).size.width * .45,
-    onPressed: () {},
-    color: const Color.fromARGB(255, 57, 199, 165),
-    shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-        side: const BorderSide(color: Color.fromARGB(255, 235, 235, 235))),
-    child: const Text('Continue', style: TextStyle(color: Colors.white)),
   );
 }
