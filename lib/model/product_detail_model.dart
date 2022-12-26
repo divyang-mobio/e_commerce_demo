@@ -2,7 +2,7 @@ import 'dart:ui';
 
 class ProductDetailModel {
   String name, description, imageLink;
-  List<Color> productColor;
+  List<Color> productColors;
   int price;
   Color bgColor;
 
@@ -12,5 +12,5 @@ class ProductDetailModel {
       required this.description,
       required this.price,
       required this.imageLink,
-      required this.productColor});
+      required this.productColors});
 }

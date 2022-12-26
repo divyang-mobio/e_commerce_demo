@@ -8,7 +8,7 @@ List<ProductDetailModel> laptopList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/mba.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey, Colors.pink]),
   ProductDetailModel(
       name: 'MacBook Pro',
       bgColor: const Color.fromARGB(255, 251, 223, 227),
@@ -16,7 +16,7 @@ List<ProductDetailModel> laptopList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/mbp.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
   ProductDetailModel(
       name: 'MacBook Pro 14',
       bgColor: const Color.fromARGB(255, 235, 235, 235),
@@ -24,7 +24,7 @@ List<ProductDetailModel> laptopList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/mbp.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
 ];
 
 List<ProductDetailModel> phoneList = [
@@ -35,7 +35,7 @@ List<ProductDetailModel> phoneList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/iphone13.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
   ProductDetailModel(
       name: 'Iphone 14',
       bgColor: const Color.fromARGB(255, 251, 223, 227),
@@ -43,7 +43,7 @@ List<ProductDetailModel> phoneList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/iphone14.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
   ProductDetailModel(
       name: 'Iphone 14 Pro',
       bgColor: Colors.white,
@@ -51,7 +51,7 @@ List<ProductDetailModel> phoneList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/iphone14pro.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
 ];
 
 List<ProductDetailModel> otherProductList = [
@@ -62,7 +62,7 @@ List<ProductDetailModel> otherProductList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/watch-ultra.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
   ProductDetailModel(
       name: 'Airpods Max',
       bgColor: const Color.fromARGB(255, 251, 223, 227),
@@ -70,7 +70,7 @@ List<ProductDetailModel> otherProductList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/airpods-max.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
   ProductDetailModel(
       name: 'Iphone 14 Pro',
       bgColor: Colors.white,
@@ -78,7 +78,7 @@ List<ProductDetailModel> otherProductList = [
       description:
           'M1 brings incredible performance, custom technologies and amazing power efficiency to MacBook Air. Packed with 16 billion transistors, it integrates the CPU, GPU every other significant component and controller onto a single tiny chip.The powerful 8-core CPU combines four performance cores and four efficiency cores that work together to tackle demanding multi-threaded tasks, while the 7-core GPU delivers blazing-fast integrated graphics.',
       imageLink: 'assets/iphone14pro.png',
-      productColor: [Colors.grey, Colors.black]),
+      productColors: [Colors.black, Colors.grey]),
 ];
 
 List<CategoryModel> categoryData = [
