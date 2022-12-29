@@ -1,13 +1,12 @@
-import 'package:e_commerce_demo/utiles/routes.dart';
-import 'package:flutter/services.dart';
+import 'package:e_commerce_demo/resources/resources.dart';
 
-import 'views/detail_screen.dart';
-import 'views/home_screen.dart';
+import '../utiles/routes.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+
+// void main() {
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

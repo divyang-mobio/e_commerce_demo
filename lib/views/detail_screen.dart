@@ -1,5 +1,5 @@
-import 'package:e_commerce_demo/model/product_detail_model.dart';
-import 'package:e_commerce_demo/model/save_item_model.dart';
+import '../model/product_detail_model.dart';
+import '../model/save_item_model.dart';
 import 'package:flutter/material.dart';
 import '../resources/resources.dart';
 import '../widgets/home_screen_widgets.dart';

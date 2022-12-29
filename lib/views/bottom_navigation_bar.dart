@@ -1,6 +1,6 @@
-import 'package:e_commerce_demo/views/upcoming_task.dart';
+import 'package:in_app_review/in_app_review.dart';
+import 'upcoming_task.dart';
 import 'package:flutter/material.dart';
-
 import '../resources/resources.dart';
 import '../widgets/home_screen_widgets.dart';
 import 'cart_screen.dart';
@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
     FirstScreen(),
     CartScreen(),
     ComingSoon(),
-    ComingSoon(),
+    ComingSoon()
   ];
 
   List appTitle = [
@@ -37,11 +37,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    _openAppReview;
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: appTitle.elementAt(_selectedIndex),
-      ),
+      appBar: AppBar(title: appTitle.elementAt(_selectedIndex)),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
@@ -50,15 +54,21 @@ class _MyHomePageState extends State<MyHomePage> {
         unselectedLabelStyle:
             const TextStyle(color: Color.fromARGB(255, 206, 206, 206)),
         items: bottomSheetData
-            .map(
-              (e) => BottomNavigationBarItem(
-                  icon: Icon(e.iconData), label: e.title),
-            )
+            .map((e) =>
+                BottomNavigationBarItem(icon: Icon(e.iconData), label: e.title))
             .toList(),
         currentIndex: _selectedIndex,
         selectedItemColor: const Color.fromARGB(255, 57, 199, 165),
         onTap: _onItemTapped,
       ),
     );
+  }
+}
+
+void _openAppReview() async {
+  final InAppReview inAppReview = InAppReview.instance;
+
+  if (await inAppReview.isAvailable()) {
+    inAppReview.openStoreListing();
   }
 }

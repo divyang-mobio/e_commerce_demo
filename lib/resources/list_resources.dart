@@ -96,3 +96,5 @@ List<BottomSheetModel> bottomSheetData = [
 ];
 
 List<SaveItemModel> saveData = [];
+
+enum FlavorType { release, debug }

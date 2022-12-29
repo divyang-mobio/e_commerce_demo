@@ -1,6 +1,7 @@
 import '../resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../widgets/flavor.dart';
 import '../widgets/home_screen_widgets.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -29,7 +30,11 @@ class _FirstScreenState extends State<FirstScreen> {
                     style:
                         TextStyle(color: Color.fromARGB(255, 162, 166, 171)))),
           ),
-          mainCardListView(context, data: laptopList, isMainView: true),
+          mainCardListView(context,
+              data: F.appFlavor == FlavorType.release
+                  ? otherProductList
+                  : laptopList,
+              isMainView: true),
           const SizedBox(height: 8),
           Padding(
             padding: const EdgeInsets.only(right: 8.0),

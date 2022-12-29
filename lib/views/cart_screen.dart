@@ -1,7 +1,6 @@
-import 'package:e_commerce_demo/model/save_item_model.dart';
+import '../model/save_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-
 import '../resources/resources.dart';
 import '../widgets/home_screen_widgets.dart';
 import 'detail_screen.dart';
@@ -132,8 +131,9 @@ class _CartScreenState extends State<CartScreen> {
                                 color: Color.fromARGB(255, 160, 160, 160))),
                         secondWidget: Text(
                             '\$${saveData.map((e) => e.price * e.numberOfItem).fold('0', (previousValue, int element) => (int.parse(previousValue) + element).toString())}',
-                            style:
-                                const TextStyle(fontWeight: FontWeight.bold, color: Color.fromARGB(255, 57, 199, 165))),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 57, 199, 165))),
                       ),
                       const SizedBox(height: 15),
                       MaterialButton(
